@@ -59,7 +59,7 @@ chatGLM可以做什么?
 #### 环境安装
 1、从官网下载CUDA和CUDN环境，要求CUDA版本11.7,CUDN版本11.x
 
-2、将模型文件chatglm-6b下载解压到根目录，[下载地址]()
+2、下载8个pytorch_model,放置到本目录chatglm-6b文件中，[下载地址](https://huggingface.co/THUDM/chatglm-6b/tree/main)
 
 ```python
 #升级pip
