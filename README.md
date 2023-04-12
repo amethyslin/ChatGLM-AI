@@ -35,11 +35,38 @@ chatGLM可以做什么?
 |INT4	|6 GB|	7 GB|
 
 
-#### 环境安装
+#### 修改配置文件
+```json
+ // config.json文件 
+{
+    //6G显存,将false改成4,8-12G显存可以改成4或者8,大于13G无需更改
+    "quantize":4,
+    //输入指令例 [title]
+    "prompt":"[title]",
+    // 最大令牌数量600 <max_length< 4096
+    "max_length":3500,
+    //top
+    "top_p":0.7,
+    //温度,值越高，生成越随机
+    "temperature":1
+}
 
 ```
+
+
+
+
+#### 环境安装
+1、从官网下载CUDA和CUDN环境，要求CUDA版本11.7,CUDN版本11.x
+
+2、将模型文件chatglm-6b下载解压到根目录，[下载地址]()
+
+```python
 #升级pip
 python -m pip install --upgrade pip
+
+#安装torch
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
 
 # 安装环境
 pip install -r requirements.txt
@@ -47,7 +74,16 @@ pip install -r requirements.txt
 ```
 
 #### 启动
+```python
+#启动界面ui
+python web.py
 
+#启动api
+python api.py
+
+#启动本地生成
+python generate.py
+```
 
 
 
