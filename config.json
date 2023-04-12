@@ -1,0 +1,12 @@
+{
+    //6G显存,将false改成4,8-12G显存可以改成4或者8,大于13G无需更改
+    "quantize":4,
+    //输入指令
+    "prompt":"[title]",
+    // 最大令牌数量600 <max_length< 4096
+    "max_length":3500,
+    //top
+    "top_p":0.7,
+    //温度,值越高，生成越随机
+    "temperature":1
+}
